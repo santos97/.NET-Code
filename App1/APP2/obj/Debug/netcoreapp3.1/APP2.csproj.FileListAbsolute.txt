@@ -1,0 +1,13 @@
+C:\Users\SShet167002\source\repos\APP2\APP2\bin\Debug\netcoreapp3.1\APP2.exe
+C:\Users\SShet167002\source\repos\APP2\APP2\bin\Debug\netcoreapp3.1\APP2.deps.json
+C:\Users\SShet167002\source\repos\APP2\APP2\bin\Debug\netcoreapp3.1\APP2.runtimeconfig.json
+C:\Users\SShet167002\source\repos\APP2\APP2\bin\Debug\netcoreapp3.1\APP2.runtimeconfig.dev.json
+C:\Users\SShet167002\source\repos\APP2\APP2\bin\Debug\netcoreapp3.1\APP2.dll
+C:\Users\SShet167002\source\repos\APP2\APP2\bin\Debug\netcoreapp3.1\APP2.pdb
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.csprojAssemblyReference.cache
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.AssemblyInfoInputs.cache
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.AssemblyInfo.cs
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.csproj.CoreCompileInputs.cache
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.dll
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.pdb
+C:\Users\SShet167002\source\repos\APP2\APP2\obj\Debug\netcoreapp3.1\APP2.genruntimeconfig.cache
