@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APP3_struct", "APP3_struct\APP3_struct.csproj", "{AFF9DEAE-E633-44D0-877E-B77DF4E2219E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFF9DEAE-E633-44D0-877E-B77DF4E2219E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF9DEAE-E633-44D0-877E-B77DF4E2219E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF9DEAE-E633-44D0-877E-B77DF4E2219E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF9DEAE-E633-44D0-877E-B77DF4E2219E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D712D0F2-77C5-41B1-B286-57D09F847CDF}
+	EndGlobalSection
+EndGlobal
