@@ -20,21 +20,21 @@ namespace APP3_struct
             items.Add(new Items{ ID="zx123",
                 Name = "Mosue",
                 Cost = 10,
-                ItemType = 1
+                ItemTypes = Itypes.Electronics
             });
             items.Add(new Items
             {
                 ID = "zx113",
                 Name = "Table",
                 Cost = 50,
-                ItemType = 2
-            });
+                ItemTypes = Itypes.Furniture
+            }); ;
             items.Add(new Items
             {
                 ID = "zx193",
                 Name = "Macbook Pro",
                 Cost = 1000,
-                ItemType = 1
+                ItemTypes = Itypes.Electronics
             });
 
             StructModel model = new StructModel();
@@ -42,7 +42,7 @@ namespace APP3_struct
             dispfinal.dis1();
 
             model.DisplayItems(items);
-            dispfinal.CombineAll(model.ItemCost, model.itype ?? 1, model.Selected);
+            dispfinal.CombineAll(model.ItemCost, model.itype, model.Selected);
             dispfinal.dis2();
             //MultiTasking.FindIt(keytype,Calculate.Itypes);
 
@@ -64,3 +64,7 @@ namespace APP3_struct
     //    }
     //}
 }
+//NEXT topics
+//base
+//virtual
+//general
