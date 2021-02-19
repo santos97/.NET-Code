@@ -74,3 +74,8 @@ namespace App4_storage
         }
     }
 }
+//extenstion methods
+//file reader
+//base
+//interface
+//c# injection
