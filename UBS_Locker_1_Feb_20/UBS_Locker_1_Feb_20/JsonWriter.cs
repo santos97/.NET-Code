@@ -28,17 +28,7 @@ namespace UBS_Locker_1_Feb_20
             }
             string json = JsonConvert.SerializeObject(_data.ToArray());
             File.WriteAllText(Path, json);
-            
-            //try
-            //{
-            //    string text = File.ReadAllText(Path);
-            //    text = text.Replace(text, "");
-            //    File.WriteAllText(Path, text);
-            //}
-            //catch(Exception e)
-            //{
-            //    Console.WriteLine(e);
-            //}
+
             
         }
     }
