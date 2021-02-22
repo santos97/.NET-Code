@@ -9,36 +9,34 @@ using System.Collections;
 
 namespace UBS_Locker_1_Feb_20
 {
-    class JsonReader: Items
+    class JsonReader//: Items
     {
         //Items item = new Items();
         public void LoadJson(Hashtable hash)
         {
-            string Path = "C:\\.NET Training\\UBS_Locker_1_Feb_20\\UBS_Locker_1_Feb_20\\Items3.json";
+            string Path = "Items3.json";
             string JsonFromFile;
             try
             {
-                using (StreamReader reader = new StreamReader(Path))
+                using StreamReader reader = new StreamReader(Path);
+                JsonFromFile = reader.ReadToEnd();
+                //Items = JsonSerializer.Deserialize<Items>(jsonString);
+                //Console.WriteLine(JsonFromFile+"---\n");
+                List<Items> items = JsonConvert.DeserializeObject<List<Items>>(JsonFromFile);
+                //dynamic array = JsonConvert.DeserializeObject(JsonFromFile);
+                foreach (var item in items)
                 {
-                    JsonFromFile = reader.ReadToEnd();
-                    //Items = JsonSerializer.Deserialize<Items>(jsonString);
-                    //Console.WriteLine(JsonFromFile+"---\n");
-                    List<Items> items = JsonConvert.DeserializeObject<List<Items>>(JsonFromFile);
-                    //dynamic array = JsonConvert.DeserializeObject(JsonFromFile);
-                    foreach (var item in items)
-                    {
-                        //Console.WriteLine("{0} {1} {2}", item.ID, item.Name, item.Quantity);
-                        hash.Add(item.ID,item);
-                    }
-                    ICollection c = hash.Keys;
+                    //Console.WriteLine("{0} {1} {2}", item.ID, item.Name, item.Quantity);
+                    hash.Add(item.ID, item);
+                }
+                ICollection c = hash.Keys;
 
-                    // Displaying the contents 
-                    //Items ItemsReader = new Items();
-                    foreach (int i in c)
-                    {
-                        Items ItemsReader = (Items)hash[i]; 
-                        Console.WriteLine("ID: {0}\t\t\t Item_Name:{1} \t\t\tQuantity:{2}", i, ItemsReader.Name,ItemsReader.Quantity);
-                    }
+                // Displaying the contents 
+                //Items ItemsReader = new Items();
+                foreach (int i in c)
+                {
+                    Items ItemsReader = (Items)hash[i];
+                    Console.WriteLine("ID: {0}\t\t\t Item_Name:{1} \t\t\tQuantity:{2}", i, ItemsReader.Name, ItemsReader.Quantity);
                 }
             }
             catch(FileLoadException f)

@@ -9,7 +9,7 @@ namespace UBS_Locker_1_Feb_20
 {
     public class JsonWriter
     {
-        public static string Path = "C:\\.NET Training\\UBS_Locker_1_Feb_20\\UBS_Locker_1_Feb_20\\Items3.json";
+        public static string Path = "Items3.json";
         public static void ReplaceText(Hashtable hash)
         {
 
