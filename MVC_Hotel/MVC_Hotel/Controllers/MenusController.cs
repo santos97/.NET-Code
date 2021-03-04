@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -96,12 +98,36 @@ namespace MVC_Hotel.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Cusine_Name,Cusine_Type,Cost")] Menu menu)
+        //public ActionResult Edit([Bind(Include = "ID,Cusine_Name,Cusine_Type,Cost")] Menu menu)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(menu).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(menu);
+        //}
+        public ActionResult Edit([Bind(Include = "ID,Cusine_Name,Cusine_Type,Cost,ModifiedBy")] MenuViewModel viewmenu )
         {
+            Menu menu = new Menu { 
+            ID=viewmenu.ID,
+            Cusine_Name=viewmenu.Cusine_Name,
+            Cusine_Type=viewmenu.Cusine_Type,
+            Cost=viewmenu.Cost
+            };
             if (ModelState.IsValid)
             {
                 db.Entry(menu).State = EntityState.Modified;
                 db.SaveChanges();
+                string SqlconString = ConfigurationManager.ConnectionStrings["MVCConnect"].ConnectionString;
+                SqlConnection conn = new SqlConnection(SqlconString);
+                conn.Open(); 
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn; 
+                cmd.CommandText = "insert into Logs values (" + viewmenu.ID + ",'" + viewmenu.ModifiedBy + "')";
+                cmd.ExecuteNonQuery();
+                conn.Close();
                 return RedirectToAction("Index");
             }
             return View(menu);
